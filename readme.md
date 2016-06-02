@@ -1,6 +1,6 @@
 # Angular todo App from TeamTreehouse
 
-> a vue.js project
+> a angular.js project
 
 # Indroduction
 
