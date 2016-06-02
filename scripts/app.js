@@ -1,5 +1,13 @@
 angular.module("todoListApp", [])
-.controller('mainCtrl', function($scope) {
+.controller('mainCtrl', function($scope, dataService) {
+
+  $scope.helloConsole = dataService.helloConsole;
+
+  dataService.getTodos(function(response){
+    console.log(response.data);
+    $scope.todos =  response.data;
+  });
+
   $scope.helloWorld = function() {
     console.log("hello world !!");
   };
@@ -8,9 +16,14 @@ angular.module("todoListApp", [])
     console.log("an input has change !!");
   };
 
-  $scope.todos = [
-    {"name": "clean the house"},
-    {"name": "water the dog"},
-    {"name": "feed the lawn"},
-  ]
+
+})
+.service('dataService', function($http){
+  this.helloConsole = function(){
+    console.log("This is the hello console service!");
+  }
+  this.getTodos = function(callback){
+    $http.get('mock/todos.json')
+    .then(callback);
+  }
 });

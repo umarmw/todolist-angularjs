@@ -1,6 +1,6 @@
-# Angular todo App from TeamTreehouse
+# Angular Todo app from TeamTreehouse
 
-> a angular.js project
+> an angular.js project
 
 # Indroduction
 
