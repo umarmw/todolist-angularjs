@@ -13,8 +13,8 @@ angular.module("todoListApp")
     console.log("The "+todo.name+" todo has been deleted!");
     //other db logic
   }
-  this.saveTodo = function(todo){
-    console.log("The "+todo.name+" todo has been saved!");
+  this.saveTodos = function(todo){
+    console.log(todo.length+" todos have been saved!");
     //other db logic
   }
 });
